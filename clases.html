@@ -34,45 +34,81 @@
 
 
 
-<form class="cuadricula-formulario"> 
-  <div>
-    <label for="validationDefault01" style="font-weight: bold;">Nombre</label>
-    <input type="text" class="form-control" id="" placeholder="Escriba su nombre">
+<form class="cuadricula-formulario" id="formClase" novalidate> 
+  
+  <div class="campo-formulario">
+    <label for="nombre" style="font-weight: bold;">Nombre</label>
+    <input type="text" class="form-control" id="nombre" placeholder="Escriba el nombre de la clase">
+    <small class="mensaje-error text-danger"><i class="bi bi-x-circle-fill me-1">X</i><span> </span></small>
   </div>
-  <div>
-    <label for="validationDefault02" style="font-weight: bold;">Apellido</label>
-    <input type="text" class="form-control" id="" placeholder="Escriba su apellido">
+
+  <div class="campo-formulario">
+    <label for="tipoClase" style="font-weight: bold;">Tipo clase</label>
+    <input type="text" class="form-control" id="tipoClase" placeholder="Futbol, Basketball, Tenis">
+    <small class="mensaje-error text-danger"><i class="bi bi-x-circle-fill me-1">X</i><span> </span></small>
   </div>
-  <div>
-    <label for="validationDefaultUsername" style="font-weight: bold;">Usuario</label>
-    <input type="text" class="form-control" id="" placeholder="Escriba su usuario">
+
+  <div class="campo-formulario">
+    <label for="participantes" style="font-weight: bold;">Cantidad de participantes</label>
+    <input type="number" class="form-control" id="participantes" placeholder="Escriba la cantidad de participantes">
+    <small class="mensaje-error text-danger"><i class="bi bi-x-circle-fill me-1">X</i><span> </span></small>
   </div>
-  <div>
-    <label for="validationDefault06" style="font-weight: bold;">Teléfono</label>
-    <input type="tel" class="form-control" id="" placeholder="+56 9...">
+
+  <div class="campo-formulario">
+    <label for="lugar" style="font-weight: bold;">Lugar</label>
+    <input type="text" class="form-control" id="lugar" placeholder="Escriba el lugar">
+<small class="mensaje-error text-danger"><i class="bi bi-x-circle-fill me-1">X</i><span> </span></small>
   </div>
-  <div>
-    <label for="validationDefault07" style="font-weight: bold;">Correo Electrónico</label>
-    <input type="email" class="form-control" id="" placeholder="ejemplo@correo.com">
+
+  <div class="campo-formulario">
+    <label for="fechaInicio" style="font-weight: bold;">Fecha/Hora inicio</label>
+    <input type="datetime-local" class="form-control" id="fechaInicio">
+<small class="mensaje-error text-danger"><i class="bi bi-x-circle-fill me-1">X</i><span> </span></small>
   </div>
-  <div>
-    <label for="validationDefault08" style="font-weight: bold;">Contraseña</label>
-    <input type="password" class="form-control" id="" placeholder="********">
+
+  <div class="campo-formulario">
+    <label for="fechaTermino" style="font-weight: bold;">Fecha/Hora termino</label>
+    <input type="datetime-local" class="form-control" id="fechaTermino">
+<small class="mensaje-error text-danger"><i class="bi bi-x-circle-fill me-1">X</i><span> </span></small>
   </div>
   
   <!-- Sección inferior -->
   <div class="bloque-completo">
-    <button class="btn-enviar" type="submit">
-      Guardar
-    </button>
+    <button class="btn-enviar" id="b" type="submit" >Guardar</button>
   </div>
 
 </form>
 
 
+
+<div class="modal fade" id="modalExito" tabindex="-1" aria-labelledby="modalExitoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-deportivo">
+      <!-- Cabecera en azul -->
+      <div class="modal-header header-deportivo">
+        <h5 class="modal-title" id="modalExitoLabel">¡Registro Exitoso!</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Cuerpo en blanco -->
+      <div class="modal-body text-center py-4 body-deportivo">
+        <p class="fs-5 texto-principal">La clase deportiva ha sido guardada correctamente en el sistema.</p>
+        <p class="text-muted small">Ya puedes revisar la agenda del centro deportivo.</p>
+      </div>
+      <!-- Botón de cierre en azul -->
+      <div class="modal-footer footer-deportivo">
+        <button type="button" class="btn btn-azul-modal" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer><small>&copy; 2026 Centro deportivo</small></footer>
 <!-- Animacion colapse cuando es responsivo -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+<!-- Archivo de validacion-->
+<script src="validacionClases.js"></script>
 </body>
 </html>

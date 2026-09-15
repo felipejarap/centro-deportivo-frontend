@@ -7,25 +7,21 @@
   box-sizing: border-box;
 }
 
-/* Títulos de los campos en negrita */
 .cuadricula-formulario label {
   font-weight: bold;
   display: block;
   margin-bottom: 5px;
 }
 
-/* Espaciado del checkbox */
 .contenedor-checkbox {
   margin-bottom: 10px;
 }
 
-/* Fila inferior que abarca las 3 columnas */
 .bloque-completo {
   grid-column: span 3;
   margin-top: 10px;
 }
 
-/* Estilo del botón de envío */
 .btn-enviar {
   padding: 8px 30px;
   background-color: #007bff;
@@ -34,21 +30,99 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.2s ease;
 }
 
-/* Efecto visual cuando pasas el mouse por encima del botón */
 .btn-enviar:hover {
   background-color: #0056b3;
 }
 
+/* Oculta los mensajes y los íconos por defecto al cargar la página */
+.campo-formulario .mensaje-error {
+  display: none;
+  color: #dc3545;
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-weight: 500;
+}
 
-/* Cuando la pantalla mida 768px de ancho o menos (tamaño tablet/celular) */
+/* Muestra el mensaje y el ícono fijado solo cuando hay un error activo */
+.campo-formulario.con-error .mensaje-error {
+  display: block;
+}
+
+/* Pinta el contorno del input en color rojo */
+.campo-formulario.con-error .form-control {
+  border-color: #dc3545;
+}
+
+/* Agrega una leve sombra roja al seleccionar el campo con error */
+.campo-formulario.con-error .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
+   ========================================================================== */
 @media (max-width: 768px) {
   .cuadricula-formulario {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas chicas */
   }
 
   .bloque-completo {
     grid-column: span 1; 
   }
+}
+
+
+/* Fondo general del modal en blanco */
+.modal-deportivo {
+  background-color: #ffffff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Cabecera del modal en azul */
+.modal-header.header-deportivo {
+  background: #007bff ;
+  background-color: #007bff ;
+  color: #ffffff ;
+}
+
+.modal-header.header-deportivo .modal-title {
+  color: #ffffff;
+}
+
+/* Cuerpo en blanco con texto oscuro para buen contraste */
+.body-deportivo {
+  background-color: #ffffff;
+}
+
+.body-deportivo .texto-principal {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+/* Footer limpio sin bordes molestos */
+.footer-deportivo {
+  background-color: #ffffff;
+  border-top: none;
+}
+
+/* Botón "Cerrar" personalizado en azul */
+.btn-azul-modal {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 6px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-azul-modal:hover {
+  background-color: #0056b3;
+  color: #ffffff;
 }
