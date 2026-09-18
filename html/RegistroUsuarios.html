@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+    <!-- Bootstrap CSS y Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="usuario.css">
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Logotipo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="clases.html">Clases</a>
+          <a class="nav-link active" href="#">Profesores</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="Usuario.html">Registro Usuario</a>
+          <a class="nav-link" href="Login.html">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="container mt-4 mb-5">
+    <form class="cuadricula-formulario" id="formUsuario" novalidate> 
+      
+      <!-- Nombres -->
+      <div class="campo-formulario mb-3">
+        <label for="nombres" class="fw-bold mb-1">Nombres</label>
+        <input type="text" class="form-control" id="nombres" placeholder="Escriba sus nombres">
+        <small class="mensaje-error text-danger d-none" id="errorNombres">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorNombres"></span>
+        </small>
+      </div>
+
+      <!-- Apellidos -->
+      <div class="campo-formulario mb-3">
+        <label for="apellidos" class="fw-bold mb-1">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" placeholder="Escriba sus apellidos">
+        <small class="mensaje-error text-danger d-none" id="errorApellidos">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorApellidos"></span>
+        </small>
+      </div>
+
+      <!-- Edad -->
+      <div class="campo-formulario mb-3">
+        <label for="edad" class="fw-bold mb-1">Edad</label>
+        <input type="number" class="form-control" id="edad" placeholder="Ingrese su edad">
+        <small class="mensaje-error text-danger d-none" id="errorEdad">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorEdad"></span>
+        </small>
+      </div>
+
+      <!-- Fecha Nacimiento -->
+      <div class="campo-formulario mb-3">
+        <label for="fechaNacimiento" class="fw-bold mb-1">Fecha Nacimiento</label>
+        <input type="date" class="form-control" id="fechaNacimiento">
+        <small class="mensaje-error text-danger d-none" id="errorFecha">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorFecha"></span>
+        </small>
+      </div>
+
+      <!-- Rut -->
+      <div class="campo-formulario mb-3">
+        <label for="rut" class="fw-bold mb-1">RUT</label>
+        <input type="text" class="form-control" id="rut" placeholder="Ej: 12345678-9">
+        <small class="mensaje-error text-danger d-none" id="errorRut">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorRut"></span>
+        </small>
+      </div>
+
+      <!-- Sexo -->
+      <div class="campo-formulario mb-3">
+        <label class="fw-bold mb-2 d-block">Sexo</label>
+        <div id="grupoSexo" class="d-flex align-items-center gap-3">
+          <div class="form-check form-check-inline m-0">
+            <input class="form-check-input radio-sexo" type="radio" name="sexo" id="sexoMasculino" value="masculino">
+            <label class="form-check-label" for="sexoMasculino">Masculino</label>
+          </div>
+          <div class="form-check form-check-inline m-0">
+            <input class="form-check-input radio-sexo" type="radio" name="sexo" id="sexoFemenino" value="femenino">
+            <label class="form-check-label" for="sexoFemenino">Femenino</label>
+          </div>
+          <div class="form-check form-check-inline m-0">
+            <input class="form-check-input radio-sexo" type="radio" name="sexo" id="sexoOtro" value="otro">
+            <label class="form-check-label" for="sexoOtro">Otro</label>
+          </div>
+        </div>
+        <small class="mensaje-error text-danger d-none mt-1" id="errorSexo">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorSexo"></span>
+        </small>
+      </div>
+
+      <!-- Correo Electrónico -->
+      <div class="campo-formulario mb-3">
+        <label for="correo" class="fw-bold mb-1">Dirección de correo electrónico</label>
+        <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
+        <small class="mensaje-error text-danger d-none" id="errorCorreo">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorCorreo"></span>
+        </small>
+      </div>
+
+      <!-- Clases de interés -->
+      <div class="campo-formulario mb-3">
+        <label class="fw-bold mb-2 d-block">Clases a elegir </label>
+        <div id="grupoClases" class="row row-cols-1 row-cols-sm-2 g-2">
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="yoga" id="claseYoga">
+              <label class="form-check-label" for="claseYoga">Yoga</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="pilates" id="clasePilates">
+              <label class="form-check-label" for="clasePilates">Pilates</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="crossfit" id="claseCrossfit">
+              <label class="form-check-label" for="claseCrossfit">Crossfit</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="spinning" id="claseSpinning">
+              <label class="form-check-label" for="claseSpinning">Spinning</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="futbol" id="claseFutbol">
+              <label class="form-check-label" for="claseFutbol">Fútbol</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="basquetball" id="claseBasquetball">
+              <label class="form-check-label" for="claseBasquetball">Básquetbol</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="boxeo" id="claseBoxeo">
+              <label class="form-check-label" for="claseBoxeo">Boxeo</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check">
+              <input class="form-check-input check-clase" type="checkbox" value="voleyball" id="claseVoleyball">
+              <label class="form-check-label" for="claseVoleyball">Vóleybol</label>
+            </div>
+          </div>
+        </div>
+        <small class="mensaje-error text-danger d-none mt-1" id="errorClases">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorClases"></span>
+        </small>
+      </div>
+
+      <!-- Horario preferido -->
+      <div class="campo-formulario mb-4">
+        <label class="fw-bold mb-2 d-block">Horario de preferencia</label>
+        <div id="grupoHorario" class="d-flex align-items-center gap-3">
+          <div class="form-check form-check-inline m-0">
+            <input class="form-check-input" type="radio" name="horario" id="horarioManana" value="manana">
+            <label class="form-check-label" for="horarioManana">Mañana</label>
+          </div>
+          <div class="form-check form-check-inline m-0">
+            <input class="form-check-input" type="radio" name="horario" id="horarioTarde" value="tarde">
+            <label class="form-check-label" for="horarioTarde">Tarde</label>
+          </div>
+          <div class="form-check form-check-inline m-0">
+            <input class="form-check-input" type="radio" name="horario" id="horarioNoche" value="noche">
+            <label class="form-check-label" for="horarioNoche">Noche</label>
+          </div>
+        </div>
+        <small class="mensaje-error text-danger d-none mt-1" id="errorHorario">
+          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorHorario"></span>
+        </small>
+      </div>
+
+      <!-- Botón de Envío -->
+      <div class="bloque-completo mt-4">
+        <button class="btn btn-primary btn-enviar px-4 py-2" id="btnGuardar" type="submit">Guardar</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
