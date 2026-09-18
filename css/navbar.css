@@ -1,0 +1,62 @@
+/* Estilo base de la barra oscura */
+.navbar-dark-custom {
+    background-color: #0f172a; /* Fondo oscuro elegante (Slate 900) */
+    padding: 12px 0;
+    border-bottom: 1px solid #1e293b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Marca (Logo + Texto a la izquierda) */
+.navbar-brand-dark {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+/* Centrado perfecto de los módulos centrales */
+.nav-center-modules {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Enlaces del menú */
+.nav-link-dark {
+    color: #94a3b8; /* Gris claro */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-link-dark:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.05); /* Efecto hover tenue */
+}
+
+/* Módulo activo */
+.nav-link-dark.active {
+    color: #38bdf8; /* Azul cyan brillante */
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* Botón de Registro */
+.btn-dark-action {
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-dark-action:hover {
+    background-color: #0369a1;
+    box-shadow: 0 0 12px rgba(2, 132, 199, 0.4);
+}

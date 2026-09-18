@@ -1,0 +1,16 @@
+.layout-pagina {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 sola columna que ocupa todo el ancho */
+    grid-template-rows: auto 1fr auto; /* Header, Contenido (flexible), Footer */
+    
+    grid-template-areas: 
+        "header"
+        "contenido"
+        "footer";
+    min-height: 100vh; /* Asegura que ocupe todo el alto de la pantalla */
+    gap: 20px;
+}
+
+.header    { grid-area: header; background-color: #3b82f6; color: white; padding: 20px; }
+.contenido { grid-area: contenido; background-color: #ffffff; padding: 20px; }
+.footer    { grid-area: footer; background-color: #1e293b; color: white; padding: 20px; }
