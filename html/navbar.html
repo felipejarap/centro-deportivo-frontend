@@ -1,21 +1,26 @@
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/index.html">Logotipo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="/html/clases.html">Clases</a>
-         <a class="nav-link active" aria-current="page" href="/html/profesores.html">Profesores</a>
-        </div>
+<link rel="stylesheet" href="/css/navbar.css">
 
-        <div class="navbar-nav ms-auto">
-        <a class="nav-link" href="#">Registro</a>
-        <a class="nav-link" href="#">Login</a>
-      </div>
+<nav class="navbar navbar-dark bg-navbar py-2">
+  <div class="container-fluid px-4 d-flex align-items-center justify-content-between position-relative">
+    
+    <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+      <img src="/resources/logo.svg" alt="Logo" width="30" height="24" class="logo-white">
+      <span class="fw-bold">KRONOFIT</span>
+    </a>
+    
+    <ul class="navbar-nav flex-row nav-center-modules">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/html/clases.html">Clases</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/html/profesores.html">Profesores</a>
+      </li>
+    </ul>
 
-      </div>
+    <div class="d-flex align-items-center">
+      <a class="nav-link text-white text-decoration-none px-2" href="/html/login">Login</a>
+      <a class="btn btn-primary btn-sm px-3 rounded-pill fw-semibold" href="/html/RegistroUsuarios.html">Registro</a>
     </div>
-  </nav>
+
+  </div>
+</nav>
