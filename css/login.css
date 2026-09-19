@@ -1,0 +1,137 @@
+
+:root {
+  --color-marca: #007bff;
+  --color-marca-hover: #0056b3;
+  --color-fondo: #f5f5f4;
+}
+
+.pagina-login {
+  background-color: var(--color-fondo);
+  min-height: 100vh;
+}
+
+.contenedor-login {
+  display: flex;
+  justify-content: center;
+  padding: 60px 16px;
+}
+
+.tarjeta-login {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(16, 29, 38, 0.12);
+}
+
+.titulo-login {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #101d26;
+  margin-bottom: 12px;
+}
+
+.texto-cuenta {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 28px;
+}
+
+.tarjeta-login a {
+  color: var(--color-marca);
+}
+
+.tarjeta-login a:hover {
+  color: var(--color-marca-hover);
+}
+
+.tarjeta-login label {
+  font-size: 0.9rem;
+  color: #101d26;
+}
+
+.tarjeta-login .form-control {
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+.tarjeta-login .form-control:focus {
+  border-color: var(--color-marca);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+/* Botón "Mostrar / Ocultar" contraseña */
+.btn-mostrar {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-marca);
+  cursor: pointer;
+}
+
+.btn-mostrar:hover {
+  text-decoration: underline;
+}
+
+.btn-mostrar i {
+  margin-right: 4px;
+}
+
+#btnLogin {
+  background-color: var(--color-marca);
+  border-color: var(--color-marca);
+  min-width: 130px;
+}
+
+#btnLogin:hover,
+#btnLogin:focus {
+  background-color: var(--color-marca-hover);
+  border-color: var(--color-marca-hover);
+}
+
+.enlaces-ayuda {
+  margin-top: 28px;
+  font-size: 0.85rem;
+}
+
+/* 
+   MENSAJES DE ERROR 
+    */
+.campo-formulario .mensaje-error {
+  display: none;
+  color: #dc3545;
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.campo-formulario.con-error .mensaje-error {
+  display: block;
+}
+
+.campo-formulario.con-error .form-control {
+  border-color: #dc3545;
+}
+
+.campo-formulario.con-error .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+
+@media (max-width: 480px) {
+  .contenedor-login {
+    padding: 24px 12px;
+  }
+
+  .tarjeta-login {
+    padding: 24px;
+  }
+
+  .titulo-login {
+    font-size: 1.8rem;
+  }
+}
