@@ -19,13 +19,12 @@
       <h1 class="titulo-login">Iniciar sesión</h1>
 
       <p class="texto-cuenta">
-        ¿Necesitas una cuenta KRONOFIT?
+        ¿Necesitas cuenta  en KRONOFIT?
         <a href="/html/RegistroUsuarios.html">Crear una cuenta</a>
       </p>
 
       <form id="formLogin" novalidate>
 
-        <!-- Usuario o correo -->
         <div class="campo-formulario mb-3">
           <label for="usuario" class="fw-bold mb-1">Usuario o correo</label>
           <input type="text" class="form-control" id="usuario" autocomplete="username">
@@ -40,7 +39,7 @@
             <label for="password" class="fw-bold mb-0">Contraseña</label>
             <button type="button" class="btn-mostrar" id="btnMostrarPassword" aria-pressed="false">
               <i class="bi bi-eye" id="iconoPassword"></i>
-              <span id="textoMostrarPassword">Mostrar</span>
+              
             </button>
           </div>
           <input type="password" class="form-control" id="password" autocomplete="current-password">
@@ -49,13 +48,7 @@
           </small>
         </div>
 
-        <!-- Mantener sesión -->
-        <div class="form-check mb-4">
-          <input class="form-check-input" type="checkbox" id="mantenerSesion">
-          <label class="form-check-label" for="mantenerSesion">Mantener la sesión iniciada</label>
-        </div>
-
-        <!-- Error general (credenciales inválidas, servicio caído, etc.) -->
+      
         <div class="alert alert-danger d-none py-2" id="errorGeneral" role="alert"></div>
 
         <!-- Botón -->
