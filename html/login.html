@@ -53,9 +53,9 @@
         <div class="campo-formulario mb-3">
           <label for="usuario" class="fw-bold mb-1">Usuario o correo</label>
           <input type="text" class="form-control" id="usuario" autocomplete="username">
-          <small class="mensaje-error text-danger">
-            <i class="bi bi-x-circle-fill me-1"></i><span></span>
-          </small>
+          <div class="invalid-feedback">
+            <span class="txt-error"></span>
+          </div>
         </div>
 
         <!-- Contraseña -->
@@ -68,15 +68,15 @@
             </button>
           </div>
           <input type="password" class="form-control" id="password" autocomplete="current-password">
-          <small class="mensaje-error text-danger">
-            <i class="bi bi-x-circle-fill me-1"></i><span></span>
-          </small>
+          <div class="invalid-feedback">
+            <span class="txt-error"></span>
+          </div>
         </div>
 
       
         <div class="alert alert-danger d-none py-2" id="errorGeneral" role="alert"></div>
 
-        <!-- Botón -->
+        
         <button type="submit" class="btn btn-primary rounded-pill fw-bold px-4 py-2" id="btnLogin">
           Iniciar sesión
         </button>
