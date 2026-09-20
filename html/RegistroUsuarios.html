@@ -44,47 +44,47 @@
       
       <!-- Nombres -->
       <div class="campo-formulario mb-3">
-        <label for="nombres" class="fw-bold mb-1">Nombres</label>
-        <input type="text" class="form-control" id="nombres" placeholder="Escriba sus nombres">
-        <small class="mensaje-error text-danger d-none" id="errorNombres">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorNombres"></span>
-        </small>
+          <label for="nombres" class="fw-bold mb-1">Nombres</label>
+          <input type="text" class="form-control" id="nombres" placeholder="Escriba sus nombres">
+          <div class="invalid-feedback mt-1">
+              <i class="bi bi-x-circle-fill me-1"></i><span class="txt-error"></span>
+          </div>
       </div>
 
       <!-- Apellidos -->
       <div class="campo-formulario mb-3">
         <label for="apellidos" class="fw-bold mb-1">Apellidos</label>
         <input type="text" class="form-control" id="apellidos" placeholder="Escriba sus apellidos">
-        <small class="mensaje-error text-danger d-none" id="errorApellidos">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorApellidos"></span>
-        </small>
+        <div class="invalid-feedback">
+           <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorApellidos"></span>
+      </div>
       </div>
 
       <!-- Edad -->
       <div class="campo-formulario mb-3">
-        <label for="edad" class="fw-bold mb-1">Edad</label>
-        <input type="number" class="form-control" id="edad" placeholder="Ingrese su edad">
-        <small class="mensaje-error text-danger d-none" id="errorEdad">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorEdad"></span>
-        </small>
+          <label for="edad" class="fw-bold mb-1">Edad</label>
+          <input type="text" class="form-control" id="edad" placeholder="Ingrese su edad">
+          <div class="invalid-feedback mt-1">
+              <i class="bi bi-x-circle-fill me-1"></i><span class="txt-error"></span>
+          </div>
       </div>
 
       <!-- Fecha Nacimiento -->
       <div class="campo-formulario mb-3">
         <label for="fechaNacimiento" class="fw-bold mb-1">Fecha Nacimiento</label>
         <input type="date" class="form-control" id="fechaNacimiento">
-        <small class="mensaje-error text-danger d-none" id="errorFecha">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorFecha"></span>
-        </small>
+        <div class="invalid-feedback">
+            <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorFecha"></span>
+        </div>
       </div>
 
       <!-- Rut -->
       <div class="campo-formulario mb-3">
         <label for="rut" class="fw-bold mb-1">RUT</label>
         <input type="text" class="form-control" id="rut" placeholder="Ej: 12345678-9">
-        <small class="mensaje-error text-danger d-none" id="errorRut">
+        <div class="invalid-feedback">
           <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorRut"></span>
-        </small>
+        </div>
       </div>
 
       <!-- Sexo -->
@@ -104,16 +104,14 @@
             <label class="form-check-label" for="sexoOtro">Otro</label>
           </div>
         </div>
-        <small class="mensaje-error text-danger d-none mt-1" id="errorSexo">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorSexo"></span>
-        </small>
+        <div class="invalid-feedback"></div>
       </div>
 
       <!-- Correo Electrónico -->
       <div class="campo-formulario mb-3">
         <label for="correo" class="fw-bold mb-1">Dirección de correo electrónico</label>
         <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
-        <small class="mensaje-error text-danger d-none" id="errorCorreo">
+        <div class="invalid-feedback">
           <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorCorreo"></span>
         </small>
       </div>
@@ -171,9 +169,8 @@
             </div>
           </div>
         </div>
-        <small class="mensaje-error text-danger d-none mt-1" id="errorClases">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorClases"></span>
-        </small>
+        <div class="invalid-feedback"></div>
+
       </div>
 
       <!-- Horario preferido -->
@@ -193,10 +190,10 @@
             <label class="form-check-label" for="horarioNoche">Noche</label>
           </div>
         </div>
-        <small class="mensaje-error text-danger d-none mt-1" id="errorHorario">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorHorario"></span>
-        </small>
+        <div class="invalid-feedback"></div>
+
       </div>
+      
 
       <!-- Botón de Envío -->
       <div class="bloque-completo mt-4">
@@ -207,7 +204,7 @@
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/validacionClases.js"></script>
+  <script src="/js/validacionRegistro.js"></script>
 <script src="/js/navbar.js"></script>
 </body>
 </html>
