@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function mostrarError(input, texto) {
-        if (!input) return;112312321312
+        if (!input) return;
 
         input.classList.add('is-invalid');
 
