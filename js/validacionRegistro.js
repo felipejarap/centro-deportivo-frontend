@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return regexCorreo.test(correo);
     }
 
-    /* Enciende el error agregando .is-invalid y escribiendo en el span */
+    
     function mostrarError(input, texto) {
         if (!input) return;
         input.classList.add('is-invalid');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    /* Apaga el error quitando .is-invalid */
+   
     function limpiarError(input) {
         if (!input) return;
         input.classList.remove('is-invalid');
@@ -47,14 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         limpiarError(input);
         return true;
     }
-
-    /* Enlazar limpieza en tiempo real mientras el usuario escribe */
-    $('#nombres').addEventListener('input', () => limpiarError($('#nombres')));
-    $('#apellidos').addEventListener('input', () => limpiarError($('#apellidos')));
-    $('#edad').addEventListener('input', () => limpiarError($('#edad')));
-    $('#fechaNacimiento').addEventListener('input', () => limpiarError($('#fechaNacimiento')));
-    $('#rut').addEventListener('input', () => limpiarError($('#rut')));
-    $('#correo').addEventListener('input', () => limpiarError($('#correo')));
+formUsuario.addEventListener('input', (e) => limpiarError(e.target));
 
     /* Evento de Envío */
     formUsuario.addEventListener('submit', (e) => {
@@ -70,19 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
         let formatosCorrectos = true;
 
         if (okNombres && !REGEX_NOMBRE.test($('#nombres').value.trim())) {
-            mostrarError($('#nombres'), 'Solo letras, mínimo dos palabras (ej: Eduardo Urquieta).');
+            mostrarError($('#nombres'), 'Solo letras, mínimo dos palabras (ej: 1er.NOMBRE 2do.NOMBRE).');
             formatosCorrectos = false;
         }
 
         if (okApellidos && !REGEX_NOMBRE.test($('#apellidos').value.trim())) {
-            mostrarError($('#apellidos'), 'Solo letras, mínimo dos palabras (ej: Urquieta Silva).');
+            mostrarError($('#apellidos'), 'Solo letras, mínimo dos palabras (ej: A.PATERNO A.MATERNO).');
             formatosCorrectos = false;
         }
 
         if (okEdad) {
             const edadNum = Number($('#edad').value.trim());
-            if (isNaN(edadNum) || edadNum < 1 || edadNum > 120) {
-                mostrarError($('#edad'), 'Ingrese una edad válida (1 - 120).');
+            if (isNaN(edadNum) || edadNum < 16 || edadNum > 80) {
+                mostrarError($('#edad'), 'Ingrese una edad válida, edad minima 16 max 80.');
                 formatosCorrectos = false;
             }
         }
