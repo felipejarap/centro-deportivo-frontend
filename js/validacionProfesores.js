@@ -69,6 +69,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return true;
         }
 
+    formProfesor.addEventListener('input', (e) => {
+        limpiarError(e.target);
+    });
+
+    formProfesor.addEventListener('focusin', (e) => {
+        limpiarError(e.target);
+    });
+
     formProfesor.addEventListener('submit', (e) => {
         e.preventDefault();
 
