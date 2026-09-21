@@ -97,32 +97,6 @@
   font-size: 0.85rem;
 }
 
-/* 
-   MENSAJES DE ERROR (Compatibles con Bootstrap e is-invalid)
-*/
-.invalid-feedback {
-  display: none;
-  color: #dc3545;
-  font-size: 0.85em;
-  margin-top: 5px;
-  font-weight: 500;
-}
-
-/* Muestra el contenedor de error cuando el input es inválido */
-.form-control.is-invalid ~ .invalid-feedback {
-  display: block;
-}
-
-/* Pinta el borde de la caja en rojo */
-.tarjeta-login .form-control.is-invalid {
-  border-color: #dc3545;
-}
-
-/* Pinta la sombra de enfoque en rojo al hacer clic */
-.tarjeta-login .form-control.is-invalid:focus {
-  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
-}
-
 @media (max-width: 480px) {
   .contenedor-login {
     padding: 24px 12px;

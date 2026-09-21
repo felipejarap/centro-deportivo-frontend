@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         input.classList.add('is-invalid');
         const feedback = input.nextElementSibling;
         if (feedback && feedback.classList.contains('invalid-feedback')) {
-            const spanTexto = feedback.querySelector('.txt-error') || feedback;
-            spanTexto.textContent = texto;
+            const spanTexto = feedback.querySelector('.txt-error');
+            if (spanTexto) spanTexto.textContent = texto;
         }
     }
 
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         limpiarError(input);
         return true;
     }
-formUsuario.addEventListener('input', (e) => limpiarError(e.target));
+    formUsuario.addEventListener('input', (e) => limpiarError(e.target));
 
     /* Evento de Envío */
     formUsuario.addEventListener('submit', (e) => {

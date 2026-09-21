@@ -1,9 +1,4 @@
 
-.navbar .nav-link:hover {
-  color: #ffffff !important;
-}
-
-
 .cuadricula-formulario {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

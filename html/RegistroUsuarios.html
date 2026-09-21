@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS y Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/registroUsuario.css">
+    <link rel="stylesheet" href="/css/registroUsuario.css">
     <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto nav-center-modules my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/html/clases.html">Clases</a>
+            <a class="nav-link" href="/html/clases.html">Clases</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/html/profesores.html">Profesores</a>
@@ -56,7 +56,7 @@
         <label for="apellidos" class="fw-bold mb-1">Apellidos</label>
         <input type="text" class="form-control" id="apellidos" placeholder="Escriba sus apellidos">
         <div class="invalid-feedback">
-           <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorApellidos"></span>
+           <i class="bi bi-x-circle-fill me-1"></i><span class="txt-error"></span>
         </div>
       </div>
 
@@ -74,7 +74,7 @@
         <label for="fechaNacimiento" class="fw-bold mb-1">Fecha Nacimiento</label>
         <input type="date" class="form-control" id="fechaNacimiento">
         <div class="invalid-feedback">
-            <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorFecha"></span>
+            <i class="bi bi-x-circle-fill me-1"></i><span class="txt-error"></span>
         </div>
       </div>
 
@@ -83,7 +83,7 @@
         <label for="rut" class="fw-bold mb-1">RUT</label>
         <input type="text" class="form-control" id="rut" placeholder="Ej: 12345678-9">
         <div class="invalid-feedback">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorRut"></span>
+          <i class="bi bi-x-circle-fill me-1"></i><span class="txt-error"></span>
         </div>
       </div>
 
@@ -112,7 +112,7 @@
         <label for="correo" class="fw-bold mb-1">Dirección de correo electrónico</label>
         <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com">
         <div class="invalid-feedback">
-          <i class="bi bi-x-circle-fill me-1"></i><span id="textoErrorCorreo"></span>
+          <i class="bi bi-x-circle-fill me-1"></i><span class="txt-error"></span>
         </div>
       </div>
 
@@ -168,7 +168,6 @@
               <label class="form-check-label" for="claseVoleyball">Vóleybol</label>
             </div>
           </div>
-          <div class="invalid-feedback"></div>
         </div>
       </div>
 
@@ -204,6 +203,6 @@
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/validacionRegistro.js"></script>
-<script src="/js/navbar.js"></script>
+
 </body>
 </html>
