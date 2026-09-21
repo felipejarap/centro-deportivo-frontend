@@ -35,8 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return edad >= 18;
     }
 
+
+    function soloLetras(texto) {
+        const regexTexto = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+        return regexTexto.test(texto);
+    }
+
     function mostrarError(input, texto) {
-        if (!input) return;
+        if (!input) return;112312321312
 
         input.classList.add('is-invalid');
 
@@ -91,14 +97,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let formatosCorrectos = true;
 
-        if (okNombre && $('#nombreProfesor').value.trim().length < 3) {
-            mostrarError($('#nombreProfesor'), 'El nombre debe tener al menos 3 caracteres.');
-            formatosCorrectos = false;
+        if (okNombre) {
+            const valNombre = $('#nombreProfesor').value.trim();
+            if (valNombre.length < 3) {
+                mostrarError($('#nombreProfesor'), 'El nombre debe tener al menos 3 caracteres.');
+                formatosCorrectos = false;
+            } else if (!soloLetras(valNombre)) {
+                mostrarError($('#nombreProfesor'), 'El nombre solo debe contener letras.');
+                formatosCorrectos = false;
+            }
         }
 
-        if (okApellido && $('#apellidoProfesor').value.trim().length < 3) {
-            mostrarError($('#apellidoProfesor'), 'El apellido debe tener al menos 3 caracteres.');
-            formatosCorrectos = false;
+        if (okApellido) {
+            const valApellido = $('#apellidoProfesor').value.trim();
+            if (valApellido.length < 3) {
+                mostrarError($('#apellidoProfesor'), 'El apellido debe tener al menos 3 caracteres.');
+                formatosCorrectos = false;
+            } else if (!soloLetras(valApellido)) {
+                mostrarError($('#apellidoProfesor'), 'El apellido solo debe contener letras.');
+                formatosCorrectos = false;
+            }
         }
 
         if (okRut && !rutValido($('#rutProfesor').value.trim())) {
